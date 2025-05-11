@@ -60,6 +60,9 @@ Cakupan proyek ini meliputi beberapa tahap utama:
     - Email: ramaadjiprsty@gmail.com
     - password: root123
 
+Link Prototype
+`https://ramaadjiprsty-students-dashboard-app-qeslo9.streamlit.app/`
+
 ## Business Dashboard
 
 Business dashboard yang telah dibuat menyajikan informasi secara real-time mengenai prediksi status siswa dan metrik-metrik penting lainnya. Dashboard ini memberikan tampilan visual tentang jumlah siswa yang berisiko drop-out, analisis kinerja akademik, serta distribusi data berdasarkan berbagai fitur.
