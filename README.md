@@ -47,21 +47,9 @@ Cakupan proyek ini meliputi beberapa tahap utama:
         pip install -r requirements.txt
         ```
     
-- **Menjalankan streamlit untuk inferensi**
-    - Buka file app.py
-    - Jalankan kode dibawah ini 
-        ```
-        streamlit run app.py
-        ```
-    - Masukkan data entri yang dibutuhkan secara manual
-    - Klik tombol prediksi, output yang keluar berupa prediksi status (Dropout/Graduate/Enrolled)
-    
 - **Email dan password Metabase**
     - Email: ramaadjiprsty@gmail.com
     - password: root123
-
-Link Prototype
-`https://ramaadjiprsty-students-dashboard-app-qeslo9.streamlit.app/`
 
 ## Business Dashboard
 
@@ -83,6 +71,19 @@ Dropout Rate by Gender: Menggambarkan tingkat dropout berdasarkan jenis kelamin 
 - Memberikan insight cepat bagi pemangku kepentingan untuk mengidentifikasi area kinerja siswa yang memerlukan perhatian lebih.
 - Memfasilitasi pengambilan keputusan strategis dalam meningkatkan retensi dan keberhasilan siswa berdasarkan data yang terukur.
 - Memungkinkan pihak sekolah dan administrator untuk memantau tren putus sekolah secara berkala dan merancang intervensi yang tepat.
+
+## Menjalankan Sistem Machine Learning
+- **Menjalankan Streamlit untuk proses prediksi**
+    - Buka file `app.py`
+        - Jalankan kode dibawah ini 
+            ```
+            streamlit run app.py
+            ```
+        - Masukkan data entri yang dibutuhkan secara manual
+        - Klik tombol prediksi, output yang keluar berupa prediksi status (Dropout/Graduate/Enrolled)
+
+- **Link Prototype**
+    - `https://ramaadjiprsty-students-dashboard-app-qeslo9.streamlit.app/`
 
 ## Conclusion
 Melalui proyek ini, telah berhasil dikembangkan model prediktif yang membantu perusahaan Edutech dalam memprediksi status siswa dan memberikan rekomendasi untuk intervensi tepat waktu. Model ini telah dievaluasi dan menunjukkan kinerja yang baik dalam hal akurasi dan f1-score. Berikut adalah skor evaluasi untuk beberapa model yang telah diuji:
@@ -112,7 +113,21 @@ Dari evaluasi ini, Logistic Regression menunjukkan performa yang lebih baik deng
 
 Dengan adanya dashboard bisnis, perusahaan dapat memantau status siswa secara real-time dan membuat keputusan berbasis data untuk meningkatkan hasil pendidikan. Dashboard ini memberikan visualisasi yang memudahkan pemangku kepentingan dalam memantau prediksi status siswa dan membantu mereka mengambil langkah-langkah intervensi yang diperlukan.
 
-### Rekomendasi Action Items (Optional)
+Selain evaluasi model, analisis menyeluruh terhadap data menunjukkan bahwa terdapat beberapa faktor signifikan yang memengaruhi risiko dropout. Berdasarkan visualisasi dan segmentasi dalam dashboard:
+- Mahasiswa dengan nilai akademik rendah, baik di semester pertama maupun kedua, - memiliki kecenderungan lebih tinggi untuk dropout.
+- Tidak memiliki beasiswa berkorelasi kuat dengan status dropout.
+- Mahasiswa kelas malam (evening) lebih rentan terhadap dropout dibandingkan kelas pagi.
+- Mahasiswa yang menunggak pembayaran (debtor) memiliki proporsi dropout yang tinggi.
+- Usia juga menjadi faktor penting: kelompok usia <25 tahun menyumbang sebagian besar dari total dropout.
+- Mahasiswa yang berasal dari keluarga dengan pendidikan orang tua rendah, terutama ibu, juga lebih banyak ditemukan dalam kelompok dropout.
+
+Dari sini, dapat disimpulkan bahwa karakteristik umum mahasiswa yang mengalami dropout adalah:
+
+>   Mahasiswa muda (<25 tahun), tidak menerima beasiswa, memiliki nilai akademik rendah, berasal dari keluarga dengan pendidikan orang tua yang terbatas, mengikuti kelas malam, dan mengalami kendala finansial.
+
+Dengan pemahaman ini, pihak institusi dapat melakukan intervensi yang lebih terarah, seperti pemberian bantuan belajar, beasiswa berbasis risiko, pendampingan mahasiswa baru, serta konseling finansial untuk mengurangi angka dropout dan meningkatkan keberhasilan studi mahasiswa.
+
+### Rekomendasi Action Items
 
 1. Dominasi Dropout oleh Mahasiswa dengan Latar Pendidikan Tertentu
     - Insight: Beberapa kategori Previous_qualification memiliki lonjakan dropout yang tinggi.
